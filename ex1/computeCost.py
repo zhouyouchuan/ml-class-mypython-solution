@@ -1,0 +1,24 @@
+import numpy as np
+
+def computeCost(X, y, theta):
+    """
+       computes the cost of using theta as the parameter for linear 
+       regression to fit the data points in X and y
+    """
+    m = y.size
+    J = 0
+
+# ====================== YOUR CODE HERE ======================
+# Instructions: Compute the cost of a particular choice of theta
+#               You should set J to the cost.
+
+
+# =========================================================================
+    hyp = np.dot(X,theta)
+    sub = hyp - y
+    pow_sub = np.power(sub,2)
+    J =(1./(2*m)) * np.sum(pow_sub)
+
+    return J
+
+
